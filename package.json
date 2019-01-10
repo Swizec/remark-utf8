@@ -17,6 +17,8 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
+    "remark": "^10.0.1",
+    "unist-util-visit": "^1.4.0"
   },
   "devDependencies": {
     "nwb": "0.21.x"
