@@ -6,6 +6,12 @@ Remark plugin to transform basic markdown into utf8 special characters. Useful f
 
 ## Basic Usage
 
+```
+$ yarn add remark-utf8
+// or
+$ npm install remark-utf8
+```
+
 ```javascript
 import remark from "remark";
 import utf8 from "remark-utf8";
