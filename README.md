@@ -1,16 +1,38 @@
 # remark-utf8
 
-[![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
 
-Describe remark-utf8 here.
+Remark plugin to transform basic markdown into utf8 special characters. Useful for when your output is going into plaintext, not HTML.
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+## Basic Usage
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+```javascript
+import remark from "remark";
+import utf8 from "remark-utf8";
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+const markdownString = `
+    Just open sourced **remark-utf8** as a standalone plugin. Use _emphasis_, \`monospace fonts\` and **bolds** wherever. Careful about those screen readers tho ✌️
+
+    https://github.com/Swizec/remark-utf8
+`;
+
+remark()
+    .use(utf8)
+    .process(markdownString, function(err, output) {
+        console.log(output.contents);
+    });
+```
+
+Outputs something like:
+
+```
+Just open sourced 𝗿𝗲𝗺𝗮𝗿𝗸-𝘂𝘁𝗳𝟴 as a standalone plugin. Use 𝘦𝘮𝘱𝘩𝘢𝘴𝘪𝘴, 𝚖𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎 𝚏𝚘𝚗𝚝𝚜 and 𝗯𝗼𝗹𝗱𝘀 wherever. Careful about those screen readers tho ✌️
+
+https://github.com/Swizec/remark-utf8
+```
+
+Use responsibly.
+
+## Warning
+
+This messes with screen readers. Make sure you are okay with inaccessible text before using this. ✌️
