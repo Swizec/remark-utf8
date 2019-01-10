@@ -1,8 +1,8 @@
 # remark-utf8
 
-[![npm package][npm-badge]][npm]
-
 Remark plugin to transform basic markdown into utf8 special characters. Useful for when your output is going into plaintext, not HTML.
+
+[![](https://s3.amazonaws.com/techletter.app/screenshot-1547102782573.png)](https://twitter.com/Swizec/status/1083253614527733760)
 
 ## Basic Usage
 
