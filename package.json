@@ -1,6 +1,6 @@
 {
     "name": "remark-utf8",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Remark plugin to transform basic markdown into special utf8 characters",
     "main": "lib/index.js",
     "module": "es/index.js",
